@@ -11,4 +11,11 @@ public class PasswordCheckerTest {
     assertEquals(0, 0);
   }
 
+  @Test
+  public void testIfAllLettersIsAlphanumeric() {
+    PasswordChecker passcheck = new PasswordChecker(6, 12);
+    boolean isAlpha = passcheck.isAlphanumeric("qwertyuiopasdfghjklzxcvbnm");
+    assertEquals(true, isAlpha);
+  }
+
 }
