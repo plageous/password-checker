@@ -18,4 +18,10 @@ public class PasswordCheckerTest {
     assertEquals(true, isAlpha);
   }
 
+  @Test
+  public void testIfPasswordEmpty() {
+    PasswordChecker passcheck = new PasswordChecker(6, 12);
+    String isEmpty = passcheck.describePasswordLength("");
+    assertEquals("short", isEmpty);
+  }
 }
