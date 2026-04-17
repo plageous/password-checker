@@ -59,4 +59,11 @@ public class PasswordCheckerTest {
     String isShort = passcheck.describePasswordLength("dog");
     assertEquals("short", isShort);
   }
+  
+  @Test
+  public void testPassLengthExtraLong() {
+    PasswordChecker passcheck = new PasswordChecker(6, 12);
+    String isLong = passcheck.describePasswordLength("TheOnlyOneOfRinsingDuties23");
+    assertEquals("long", isLong);
+  }
 }
