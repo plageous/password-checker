@@ -61,14 +61,9 @@ public class PasswordChecker {
      * @return true if the password is alphanumeric, false otherwise
      */
     public boolean isAlphanumeric(String password) {
-        for (int i = 0; i < password.length() - 1; i++) {
+        for (int i = 0; i < password.length(); i++) {
             char c = password.charAt(i);
-            // only checks first character of password
-            if (!Character.isLetterOrDigit(c)) {
-                return false;
-            } else {
-                return true;
-            }
+            if (!Character.isLetterOrDigit(c)) { return false; }
         }
         return true;
     }
