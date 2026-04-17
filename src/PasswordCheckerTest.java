@@ -66,4 +66,11 @@ public class PasswordCheckerTest {
     String isLong = passcheck.describePasswordLength("TheOnlyOneOfRinsingDuties23");
     assertEquals("long", isLong);
   }
+
+  @Test
+  public void testPassLengthMedium() {
+    PasswordChecker passcheck = new PasswordChecker(2, 6);
+    String isMedium = passcheck.describePasswordLength("dogs");
+    assertEquals("medium", isMedium);
+  }
 }
