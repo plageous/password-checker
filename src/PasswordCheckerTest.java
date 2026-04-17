@@ -45,4 +45,11 @@ public class PasswordCheckerTest {
     boolean isBanned = passcheck.isBannedPassword("PASSword123$");
     assertEquals(false, isBanned);
   }
+
+  @Test
+  public void testIsBannedWithValidPassword() {
+    PasswordChecker passcheck = new PasswordChecker(6, 12);
+    boolean isBanned = passcheck.isBannedPassword("SuperCooler12345!");
+    assertEquals(false, isBanned);
+  }
 }
