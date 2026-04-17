@@ -37,6 +37,12 @@ public class PasswordCheckerTest {
       PasswordChecker passcheck = new PasswordChecker(6, 12);
       boolean isValid = passcheck.isBannedPassword("qwerty");
       assertEquals(true, isValid);
+  }
 
+  @Test
+  public void testIsBannedWithSymbolsAndNumbers() {
+    PasswordChecker passcheck = new PasswordChecker(6, 12);
+    boolean isBanned = passcheck.isBannedPassword("PASSword123$");
+    assertEquals(false, isBanned);
   }
 }
